@@ -5,7 +5,7 @@ public class SelectionSort {
     // goes at 0 & so on)
     public static void main(String[] args) {
         int[] arr = { 64, 25, 12, 32, 11 };
-        foo(arr);
+        foo2(arr);
         System.out.println(Arrays.toString(arr));
     }
 
@@ -18,6 +18,20 @@ public class SelectionSort {
                 }
             }
             swap(arr, min_index, i);
+        }
+    }
+
+    public static void foo2(int[] arr) {
+        int start = 0;
+        while (start < arr.length) {
+            int min_idx = start;
+            for (int i = start + 1; i < arr.length; i++) {
+                if (arr[min_idx] > arr[i]) {
+                    min_idx = i;
+                }
+            }
+            swap(arr, start, min_idx);
+            start++;
         }
     }
 
