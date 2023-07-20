@@ -19,7 +19,26 @@ public class Test {
             a.add(el);
         }
 
-        System.out.println(kthSmallLarge(a, a.size(), 4));
+        // System.out.println(kthSmallLarge(a, a.size(), 4));
+
+        System.out.println(Arrays.toString(foo3(new int[] { 0, 1, 1, 1 })));
+    }
+
+    public static int[] foo3(int[] arr) {
+        // Your code goes here
+        int res = 1;
+        for (int el : arr) {
+            res *= el;
+        }
+
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == 0) {
+                arr[i] = 0;
+            } else
+                arr[i] = (res / arr[i]) % 1000000007;
+        }
+
+        return arr;
     }
 
     public static boolean foo2(String s) {
