@@ -4,6 +4,14 @@ public class Test {
     public static void main(String[] args) {
         // int[] arr = { 2, 0, 0, 10, 1, 0, 2, 2 };
         // int[] arr = { 0, 3, 0, 2, 0 };
+        Scanner in = new Scanner(System.in);
+        String name = in.nextLine();
+        int age = in.nextInt();
+
+        in.close();
+
+        System.out.println("My name is " + name + " and my age is " + age + ".");
+
         int[] arr = { 2, 9, 4, 8, 1, 7, 6 };
 
         // System.out.println(reverseString("abc"));
